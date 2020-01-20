@@ -3,25 +3,30 @@
     <div class="nav-wrapper" role="navigation" aria-label="primary navigation">
       <div class="nav level is-mobile">
         <div class="level-left">
-          <Logo v-if="showLogo" />
+          <Logo />
+        </div>
+        <div class="level-item">
+          <g-link class="card-image" to="/projects">
+            Projects
+          </g-link>
         </div>
         <div class="level-right">
           <a class="level-item" href="//github.com/calebanthony/">
-            <span class="icon is-medium">
-              <fa :icon="['fab', 'github']" size="2x" />
+            <span class="icon">
+              <fa :icon="['fab', 'github']" size="lg" />
             </span>
           </a>
           <a
             class="level-item"
             href="//stackoverflow.com/users/6646558/caleb-anthony?tab=profile"
           >
-            <span class="icon is-medium">
-              <fa :icon="['fab', 'stack-overflow']" size="2x" />
+            <span class="icon">
+              <fa :icon="['fab', 'stack-overflow']" size="lg" />
             </span>
           </a>
           <a class="level-item" href="//www.linkedin.com/in/calebanthony/">
-            <span class="icon is-medium">
-              <fa :icon="['fab', 'linkedin-in']" size="2x" />
+            <span class="icon">
+              <fa :icon="['fab', 'linkedin-in']" size="lg" />
             </span>
           </a>
         </div>
@@ -33,8 +38,13 @@
     </main>
 
     <footer class="footer has-text-centered">
-      <span>Copyright © {{ new Date().getFullYear() }}. </span>
-      <span>Powered by <a href="//gridsome.org"> Gridsome </a></span>
+      <span>Built by Caleb</span>
+      <span> | </span>
+      <span>
+        Powered by <a href="//gridsome.org" target="_blank"> Gridsome </a>
+      </span>
+      <span> | </span>
+      <span>Hosted by <a href="//zeit.co" target="_blank">ZEIT</a></span>
     </footer>
   </div>
 </template>
@@ -45,12 +55,6 @@ import Logo from "~/components/Logo.vue";
 export default {
   components: {
     Logo
-  },
-  props: {
-    showLogo: {
-      type: Boolean,
-      default: true
-    }
   },
   data: () => ({
     showNav: false

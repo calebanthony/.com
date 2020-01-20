@@ -6,7 +6,7 @@ import Vue from 'vue';
  */
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faUser
+  faUser, faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faLinkedinIn, faGithub, faStackOverflow,
@@ -17,7 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
  * Set up the Font Awesome icons we want to use
  */
 library.add(
-  faUser, faLinkedinIn, faGithub, faStackOverflow,
+  faUser, faLinkedinIn, faGithub, faStackOverflow, faGlobe,
 );
 Vue.component('fa', FontAwesomeIcon);
 

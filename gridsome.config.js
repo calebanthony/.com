@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome Bulma Starter',
-  siteDescription: 'A baseline Gridsome starter to get you going with Bulma.',
+  siteName: 'Caleb Anthony',
+  siteDescription: 'The personal professional website for Caleb Anthony.',
 
   templates: {
     Post: '/:title',
@@ -27,6 +27,14 @@ module.exports = {
             create: true,
           },
         },
+      },
+    },
+    {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Project',
+        path: 'content/projects/*.md',
       },
     },
   ],

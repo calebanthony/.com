@@ -325,7 +325,32 @@ body > .navbar {
   }
 }
 
-.footer {
-  padding: 0.5em;
-  font-size: 12px;
+// Gets cards to match up in height
+.card {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  .card-footer {
+    margin-top: auto;
+  }
+}
+
+// Makes sure the full width of the website isn't too wide
+main.content {
+  max-width: 1196px;
+  margin: 0 auto;
+}
+
+// Keeps footer at the bottom
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .footer {
+    padding: 0.5em;
+    font-size: 12px;
+    margin-top: auto;
+  }
 }
