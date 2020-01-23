@@ -4,21 +4,12 @@
       <h1 class="title is-1">
         {{ $page.post.title }}
       </h1>
-      <PostMeta
-        class="subtitle is-size-6"
-        :post="$page.post"
-      />
+      <PostMeta class="subtitle is-size-6" :post="$page.post" />
     </div>
 
     <div class="post content section container">
-      <figure
-        v-if="$page.post.cover_image"
-        class="image is-16by9"
-      >
-        <g-image
-          alt="Cover image"
-          :src="$page.post.cover_image"
-        />
+      <figure v-if="$page.post.cover_image" class="image is-16by9">
+        <g-image alt="Cover image" :src="$page.post.cover_image" />
       </figure>
 
       <p v-html="$page.post.content" />
@@ -35,25 +26,25 @@
 </template>
 
 <script>
-import PostMeta from '~/components/PostMeta';
-import PostTags from '~/components/PostTags';
+import PostMeta from "~/components/PostMeta";
+import PostTags from "~/components/PostTags";
 
 export default {
   components: {
     PostMeta,
-    PostTags,
+    PostTags
   },
   metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
         {
-          name: 'description',
-          content: this.$page.post.description,
-        },
-      ],
+          name: "description",
+          content: this.$page.post.description
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
@@ -71,7 +62,7 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (width: 860, blur: 10)
+    // cover_image (width: 860, blur: 10)
   }
 }
 </page-query>
