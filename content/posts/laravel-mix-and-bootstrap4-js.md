@@ -4,6 +4,7 @@ date: 2017-03-16
 published: true
 tags: ['Laravel', 'Javascript']
 canonical_url: false
+cover_image: ./images/alexandr-podvalny-220262-unsplash.jpg
 description: "Getting Bootstrap 4's Javascript to play nicely with Laravel's build system."
 ---
 
