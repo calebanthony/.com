@@ -336,21 +336,22 @@ body > .navbar {
   }
 }
 
-// Makes sure the full width of the website isn't too wide
-main.content {
-  max-width: 1196px;
-  margin: 0 auto;
-}
-
 // Keeps footer at the bottom
 #app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  // Makes sure the full width of the website isn't too wide
+  max-width: 1196px;
+  margin: 0 auto;
 
   .footer {
     padding: 0.5em;
     font-size: 12px;
     margin-top: auto;
   }
+}
+
+.has-recent-projects {
+  margin-top: 5em;
 }

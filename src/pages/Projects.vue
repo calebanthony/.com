@@ -33,6 +33,9 @@ import ProjectCard from "~/components/ProjectCard.vue";
 export default {
   components: {
     ProjectCard
+  },
+  metaInfo: {
+    title: "Projects"
   }
 };
 </script>

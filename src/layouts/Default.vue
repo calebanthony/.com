@@ -5,12 +5,17 @@
         <div class="level-left">
           <Logo />
         </div>
-        <div class="level-item">
-          <g-link class="card-image" to="/projects">
-            Projects
-          </g-link>
-        </div>
         <div class="level-right">
+          <div class="level-item">
+            <g-link class="button" to="/projects">
+              Projects
+            </g-link>
+          </div>
+          <div class="level-item">
+            <g-link class="button" to="/posts">
+              Posts
+            </g-link>
+          </div>
           <a class="level-item" href="//github.com/calebanthony/">
             <span class="icon">
               <fa :icon="['fab', 'github']" size="lg" />
