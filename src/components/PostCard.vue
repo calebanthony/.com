@@ -1,22 +1,15 @@
 <template>
   <div class="card">
-    <g-link
-      v-if="post.cover_image"
-      class="card-image"
-      :to="post.path"
-    >
+    <g-link v-if="post.cover_image" :to="post.path" class="card-image">
       <figure class="image is-16by9">
         <g-image
-          alt="Cover image"
           :src="post.cover_image"
+          alt="Cover image"
         />
       </figure>
     </g-link>
     <div class="card-content">
-      <g-link
-        :to="post.path"
-        class="is-size-4 has-text-weight-bold"
-      >
+      <g-link :to="post.path" class="is-size-4 has-text-weight-bold">
         {{ post.title }}
       </g-link>
       <p
@@ -38,8 +31,8 @@
 </template>
 
 <script>
-import PostMeta from '~/components/PostMeta';
-import PostTags from '~/components/PostTags';
+import PostMeta from '~/components/PostMeta.vue';
+import PostTags from '~/components/PostTags.vue';
 
 export default {
   components: {

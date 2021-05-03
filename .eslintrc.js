@@ -15,7 +15,10 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/html-indent': ['error', 2],
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 3,
+    }],
   },
   parserOptions: {
     parser: 'babel-eslint',

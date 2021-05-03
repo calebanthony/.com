@@ -12,7 +12,7 @@
         <g-image alt="Cover image" :src="$page.post.cover_image" />
       </figure>
 
-      <p v-html="$page.post.content" />
+      <p class="story-container" v-html="$page.post.content" />
 
       <footer>
         <PostTags :post="$page.post" />
@@ -26,34 +26,34 @@
 </template>
 
 <script>
-import PostMeta from "~/components/PostMeta";
-import PostTags from "~/components/PostTags";
+import PostMeta from '~/components/PostMeta.vue';
+import PostTags from '~/components/PostTags.vue';
 
 export default {
   components: {
     PostMeta,
-    PostTags
+    PostTags,
   },
   metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
         {
-          name: "description",
-          content: this.$page.post.description
-        }
-      ]
+          name: 'description',
+          content: this.$page.post.description,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
 <page-query>
-query Post ($id: ID!) {
-  post: post (id: $id) {
+query Post($id: ID!) {
+  post: post(id: $id) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    date(format: "D. MMMM YYYY")
     timeToRead
     tags {
       id
@@ -62,7 +62,7 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (width: 860, blur: 10)
+    cover_image(width: 860, blur: 10)
   }
 }
 </page-query>

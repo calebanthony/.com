@@ -4,8 +4,8 @@
       <g-image
         src="~/assets/images/logo.png"
         :alt="$static.metadata.siteName"
-        width="100"
-        immediate="true"
+        width="110"
+        :immediate="true"
       />
     </figure>
   </g-link>

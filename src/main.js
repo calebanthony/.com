@@ -1,5 +1,6 @@
 // Import main css
 import '~/assets/style/index.scss';
+import 'prismjs/themes/prism-tomorrow.css';
 
 // Import additional libraries
 import '~/lib/fontawesome';
