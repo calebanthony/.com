@@ -11,31 +11,31 @@
 </template>
 
 <page-query>
-query {
-  projects: allProject {
-    edges {
-      node {
-        id
-        title
-        repo_link
-        live_link
-        tags
-        content
+  query {
+    projects: allProject {
+      edges {
+        node {
+          id
+          title
+          repo_link
+          live_link
+          tags
+          content
+        }
       }
     }
   }
-}
 </page-query>
 
 <script>
-import ProjectCard from "~/components/ProjectCard.vue";
+import ProjectCard from '~/components/ProjectCard.vue';
 
 export default {
   components: {
-    ProjectCard
+    ProjectCard,
   },
   metaInfo: {
-    title: "Projects"
-  }
+    title: 'Projects',
+  },
 };
 </script>
